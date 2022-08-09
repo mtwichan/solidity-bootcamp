@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <head>
+        <title>SpaceCoinToken ICO</title>     
+        <script src="/index.975ef6c8.js" defer="">
+</script>   
+    </head>
+    <body>
+        <h1>SpaceCoinToken ICO</h1>
+        <h2>Address</h2>
+        <p id="user-address">"0x"</p>
+        <h2>Metadata</h2>
+        <div>
+            <div>
+                <span>Token Amount: <span id="ico-token-amount">0</span> </span>
+            </div>
+            <div>
+                <span>Account Balance: <span id="ico-account-balance">0</span> </span>
+            </div>         
+            <div>
+                <span>State: <span id="ico-state">0</span> </span>
+            </div>         
+            <div>
+                <span>Total Contribution: <span id="ico-total-contribution">0</span> </span>
+            </div>
+            <div>
+                <button id="button-metadata" onclick="buttonUpdateMetadata()">Update Metadata</button>
+            </div>            
+        </div>
+        <div>
+            <h2>Purchase Tokens From ICO</h2>
+            <form id="form-ico" onsubmit="return false;">
+                <label for="eth-ico-amount">ETH to Put Into ICO:</label><br>
+                <input type="number" id="eth-ico-amount" name="eth-ico-amount" value="0">
+                <input type="button" value="Buy" onclick="buttonDepositETHICO()">
+            </form>
+        </div>
+        <div>
+            <h2>Control Panel (Testing - Remove in Prod)</h2>
+            <button id="button-next-state" onclick="buttonNextState()">Next State</button>
+        </div>
+        <div>
+            <h2>Status Message</h2>
+            <p id="status-message">None</p>
+        </div>
+    </body>
+

@@ -1,0 +1,41 @@
+```
+callDatas = ethers.utils.defaultAbiCoder.encode(['address', 'uint256'], [nftContractAddress, 1]);
+
+
+>0x000000000000000000000000cf7ed3acca5a467e9e704c703e8d87f634fb0fc90000000000000000000000000000000000000000000000000000000000000001
+```
+
+```
+let encoded = ethers.utils.defaultAbiCoder.encode(
+      ["address[]", "uint256[]", "bytes[]", "string"],
+      [[dao.address], [ONE_ETH], [callDatas], descriptionHash]
+    );
+
+    let proposalId = ethers.BigNumber.from(ethers.utils.keccak256(encoded));
+```
+
+```
+greeterInterface = new ethers.utils.Interface(GreeterJSON.abi);
+ const callData = greeterInterface.encodeFunctionData("greet");
+ ```
+
+ ```
+ calldatas.push(
+        ethers.utils.defaultAbiCoder.encode(
+          ["address", "uint256"],
+          [alice.address, 22]
+        )
+      );
+
+or just "0x" when the calldata is empty
+```
+
+```
+write a note for "tallying" - tallying just means to recognize and accumulate the vote. So in the language, "Write a function that allows any address to tally a vote cast" you can re-write this to be "Write a function that allows any address to recognize and accumulate a vote cast" 
+
+so if Alice was tallying votes in a general election, she would be standing at a ballot box counting votes for candidates coming in
+```
+
+```
+https://dev.to/zemse/ethersjs-signing-eip712-typed-structs-2ph8 
+```

@@ -1,0 +1,5 @@
+{
+    "solidity.remappings": [
+      "@openzeppelin/=/Users/matthew/Desktop/coding/0xmacro/ico/node_modules/OpenZeppelin/"
+    ]
+  }
